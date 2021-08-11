@@ -2,7 +2,7 @@
     "apps":
     [
         {
-            "appId": "io.ionic.starter",
+            "appId": "",
             "root": "rfm/rfm_tmp"
         }
     ]
