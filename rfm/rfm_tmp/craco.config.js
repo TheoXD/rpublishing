@@ -9,7 +9,7 @@ module.exports = {
   ],
     eslint: {
       mode: ESLINT_MODES.extends,
-      configure: () => {
+      configure: {
         rules: {
           "no-unused-vars": "off"
         }
