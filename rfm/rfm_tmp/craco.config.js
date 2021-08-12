@@ -7,14 +7,14 @@ module.exports = {
       plugin: require('craco-plugin-scoped-css'),
     },
   ],
-    eslint: {
-      mode: ESLINT_MODES.extends,
-      configure: {
-        rules: {
-          "no-unused-vars": "off"
-        }
+  eslint: {
+    mode: ESLINT_MODES.extends,
+    configure: {
+      rules: {
+        "no-unused-vars": "off"
       }
-    },
+    }
+  },
   webpack: {
     rules: [
       //...
