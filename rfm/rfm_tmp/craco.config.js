@@ -10,7 +10,9 @@ module.exports = {
     eslint: {
       mode: ESLINT_MODES.extends,
       configure: () => {
-        return require('./.eslintrc')
+        rules: {
+          "no-unused-vars": "off"
+        }
       }
     },
   webpack: {
