@@ -1,4 +1,5 @@
 const path = require('path');
+const { ESLINT_MODES } = require("@craco/craco");
 
 module.exports = {
   plugins: [
