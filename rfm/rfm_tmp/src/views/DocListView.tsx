@@ -5,7 +5,6 @@ import { useHistory } from 'react-router';
 
 import {
   IonContent,
-  IonProgressBar,
   IonFab,
   IonFabButton,
   IonIcon,
