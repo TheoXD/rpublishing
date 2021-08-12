@@ -25,7 +25,7 @@ import { ReactComponent as RChainLogo } from './assets/rchain.svg';
 
 import IdentityScreen from './components/identity/IdentityScreen';
 
-import { personCircle, closeCircleOutline, pin } from 'ionicons/icons';
+import { personCircle, closeCircleOutline } from 'ionicons/icons';
 
 import { Device } from "@capacitor/device";
 
@@ -57,9 +57,7 @@ const AppComponent: React.FC<AppProps> = props => {
     Device.getInfo().then(info => {
       props.setPlatform(info.platform);
     });
-  }, []);
-
-  const slides = React.useRef(null);
+  });
 
   const slideOpts: Record<string, unknown> = {
     initialSlide: 0,

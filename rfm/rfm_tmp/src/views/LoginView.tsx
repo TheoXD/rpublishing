@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import * as rchainToolkit from 'rchain-toolkit';
-import React, { Suspense, useState, useEffect } from 'react';
-import { useHistory } from 'react-router';
+import React, { Suspense, useState } from 'react';
+
 import {
   IonContent,
   IonItem,
@@ -11,9 +11,6 @@ import {
   IonButton,
   IonSlides,
   IonSlide,
-  IonGrid,
-  IonRow,
-  IonCol,
   IonToggle,
   IonLoading,
 } from '@ionic/react';
@@ -22,7 +19,6 @@ import { HistoryState, getPlatform } from '../store';
 
 import NoIdentityScreen from '../components/identity/NoIdentityScreen';
 //import CreateIdentityScreen from "../components/identity/CreateIdentityScreen";
-import { ReactComponent as RChainLogo } from '../assets/rchain.svg';
 
 interface LoginViewProps {
   platform: string;
@@ -34,13 +30,10 @@ interface LoginViewProps {
   }) => void;
 }
 const LoginViewComponent: React.FC<LoginViewProps> = props => {
-  const history = useHistory();
   const [privateKey, setPrivateKey] = useState<string>('');
   const [registryUri, setRegstryUri] = useState<string>('');
 
   const [devLogin, setDevLogin] = useState(false);
-
-  const [maxSlide, setMaxSlide] = useState<string>('');
 
   const slideOpts: Record<string, unknown> = {
     initialSlide: 0,

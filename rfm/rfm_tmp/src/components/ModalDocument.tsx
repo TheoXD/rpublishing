@@ -8,13 +8,12 @@ import {
   IonIcon,
   IonLabel
 } from '@ionic/react';
-import { closeCircle, downloadOutline } from 'ionicons/icons';
+import { downloadOutline } from 'ionicons/icons';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useHistory } from 'react-router';
 import { Page, pdfjs, Document as PdfDocument } from 'react-pdf';
 
-import QRCodeComponent from './QRCodeComponent';
 import checkSignature from '../utils/checkSignature';
 import { State, Document, HistoryState, getPlatform } from '../store';
 
@@ -46,8 +45,6 @@ const ModalDocumentComponent: React.FC<ModalDocumentProps> = (
   props: ModalDocumentProps
 ) => {
   const history = useHistory();
-  const pdfcontent64 = '';
-  const [page, setPage] = useState<number>();
 
   const [numPages, setNumPages] = useState<number>();
   function onDocumentLoadSuccess(docInfo: DocumentInfo) {

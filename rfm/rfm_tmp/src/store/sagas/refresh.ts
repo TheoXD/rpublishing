@@ -2,15 +2,11 @@ import { takeEvery, put } from 'redux-saga/effects';
 import * as rchainToolkit from 'rchain-toolkit';
 import {CombinedState} from 'redux';
 
-import { store, State, Bag, AccountStorage, Document, Signature, getPrivateKey } from '..';
+import { store, State, Bag, Document, Signature, getPrivateKey } from '..';
 import { addressFromBagId } from '../../utils/addressFromBagId';
 import { inflate } from 'pako';
 
-import { push, RouterState } from 'connected-react-router';
-
-import {
-  FingerprintAIO
-} from "@ionic-native/fingerprint-aio/";
+import { RouterState } from 'connected-react-router';
 
 import KeyResolver from 'key-did-resolver';
 import { getResolver as getRchainResolver } from "rchain-did-resolver";

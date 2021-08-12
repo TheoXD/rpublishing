@@ -44,9 +44,6 @@ declare global {
 }
 */
 
-const renderLoading = () => {
-  return <IonProgressBar color="secondary" type="indeterminate" />;
-};
 
 type TRouteParams = {
   uri: string; // since it route params

@@ -12,9 +12,7 @@ import {
 } from '@ionic/react';
 import './IdentityScreen.scoped.css';
 
-import { generateMnemonic, mnemonicToSeedSync, validateMnemonic } from "bip39";
-import hdkey from "ethereumjs-wallet/dist/hdkey";
-import { bufferToHex, pubToAddress, toChecksumAddress } from "ethereumjs-util";
+import { generateMnemonic } from "bip39";
 
 
 const CreateIdentityScreen: React.FC = (props) => {
